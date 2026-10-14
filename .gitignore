@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Model weights (too large for git — reproducible via training pipeline)
+fused_model/model-q8.gguf
+adapters/*.safetensors
+
+# Local data (generated at runtime)
+chroma_db/
+training_data/*.jsonl
+
+# macOS
+.DS_Store
+
+# Claude Code project config (contains absolute paths)
+.claude/

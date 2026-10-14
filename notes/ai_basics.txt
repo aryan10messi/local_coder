@@ -1,0 +1,17 @@
+What is RAG (Retrieval Augmented Generation)?
+RAG is a technique that combines information retrieval with text generation.
+Instead of relying solely on what an LLM learned during training, RAG first
+searches a knowledge base for relevant documents, then feeds those documents
+as context to the LLM so it can generate accurate, grounded answers.
+
+The RAG pipeline has three steps:
+1. Indexing: Documents are split into chunks, converted to embeddings (vectors),
+   and stored in a vector database.
+2. Retrieval: When a user asks a question, the question is also converted to an
+   embedding, and the most similar document chunks are retrieved from the vector DB.
+3. Generation: The retrieved chunks are passed as context to the LLM, which
+   generates an answer based on that context.
+
+RAG solves the hallucination problem by grounding the LLM's responses in actual data.
+It also allows the LLM to answer questions about private or recent data that wasn't
+in its training set.

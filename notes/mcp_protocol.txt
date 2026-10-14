@@ -1,0 +1,23 @@
+Model Context Protocol (MCP)
+
+MCP is an open protocol created by Anthropic that standardizes how AI applications
+connect to external tools and data sources. Think of it like USB-C for AI — one
+standard connector instead of custom integrations for every tool.
+
+Key concepts:
+- MCP Server: Exposes tools and resources that an AI can use. For example, a server
+  that provides access to a database, a file system, or an API.
+- MCP Client: The AI application that connects to MCP servers and uses their tools.
+  Claude Desktop, Claude Code, and other apps are MCP clients.
+- Tools: Functions the AI can call, like "search_documents" or "create_file".
+  Each tool has a name, description, and input schema.
+- Resources: Data the server can provide, like file contents or database records.
+
+MCP uses JSON-RPC over stdio (for local servers) or HTTP with SSE (for remote servers).
+The server declares what tools it offers, and the client decides when to call them
+based on the user's request.
+
+Benefits:
+- Standardized interface — build once, use with any MCP client
+- Security — the user approves each tool call
+- Composability — combine multiple MCP servers for complex workflows

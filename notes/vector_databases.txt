@@ -1,0 +1,21 @@
+Vector Databases Explained
+
+A vector database stores data as high-dimensional vectors (arrays of numbers).
+These vectors are created by embedding models that convert text, images, or
+other data into numerical representations that capture semantic meaning.
+
+Popular vector databases include:
+- ChromaDB: Lightweight, runs in-process, great for prototyping
+- Pinecone: Fully managed cloud service, scales well
+- Weaviate: Open source, supports hybrid search
+- Qdrant: Open source, written in Rust, very fast
+- Milvus: Open source, designed for massive scale
+
+Key operations:
+- Insert: Add vectors with metadata
+- Search: Find the K most similar vectors to a query vector (K-nearest neighbors)
+- Filter: Combine vector similarity with metadata filters
+
+Similarity is typically measured using cosine similarity or euclidean distance.
+Cosine similarity measures the angle between two vectors (1.0 = identical direction,
+0.0 = perpendicular, -1.0 = opposite).
