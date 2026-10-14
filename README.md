@@ -53,8 +53,8 @@ The agent can also run standalone via `rag_graph.py`, which implements a full La
 
 ```bash
 # Clone and set up
-git clone https://github.com/YOUR_USERNAME/ai-code-assistant.git
-cd ai-code-assistant
+git clone https://github.com/aryan10messi/local_coder.git
+cd local_coder
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
